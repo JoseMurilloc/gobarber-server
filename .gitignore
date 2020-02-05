@@ -1,0 +1,11 @@
+.vscode/
+node_modules/
+__tests__/coverage
+.env
+.env.test
+
+# Excludes all uploaded files
+tmp/uploads/*
+
+# Exception .gitkeep (folders in repo can't be empty)
+!tmp/uploads/.gitkeep
