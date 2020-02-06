@@ -38,10 +38,8 @@ class App {
 
   expitionHandle() {
     this.server.use(async (err, req, res, next) => {
-      if (['development', 'test'].includes(process.env.NODE_ENV)) {
+      if (['development'].includes(process.env.NODE_ENV)) {
         const errors = await new Youch(err, req).toJSON();
-
-        console.error(err);
 
         return res.status(500).json(errors);
       }

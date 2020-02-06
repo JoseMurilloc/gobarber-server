@@ -23,7 +23,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      `${proces.env.MONGO_URL}`,
+      `${process.env.MONGO_URL}`,
       {
         useNewUrlParser: true,
         useFindAndModify: true,
